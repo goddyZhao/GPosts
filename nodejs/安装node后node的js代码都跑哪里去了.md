@@ -53,11 +53,11 @@ exit $?</code></pre>
 
           'inputs': [
             './tools/js2c.py',
-            '<@(library_files)',
+            '&lt;@(library_files)',
           ],
 
           'outputs': [
-            '<(SHARED_INTERMEDIATE_DIR)/node_natives.h',
+            '&lt;(SHARED_INTERMEDIATE_DIR)/node_natives.h',
           ],
           ...</code></pre>
 
