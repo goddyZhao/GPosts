@@ -28,4 +28,24 @@ function timer_tick() {
 
 timer_tick();</code></pre>
 
+具体调试步骤如下：  
 
+*  **以debug模式来运行上述代码**： node默认运行方式是直接 node filename。node还提供了两种debug模式运行：  
+1. node --debug\[=port\] filename （这种方式，其实就是在指定的端口（默认为 5858）监听远程调试连接）  
+2. node --debug-brk\[=port\] filename （这种方式在监听的同时，会在代码执行的时候，强制断点在第一行，这样有个好处就是：**可以debug到node内部的是如何运行的**）  
+这里采用第二种方式运行： _node --debug-brk dbgtest.js_。  
+这个时候终端就会出现这样一个log：  
+<pre><code>debugger listening on port 5858</code></pre> 说明已经开始监听了。  
+
+*  **启动node-inspector**： 首 info  - socket.io started
+visit http://0.0.0.0:8080/debug?port=5858 to start debugging先，我们要**全局**安装node-inspector模块，如果你真不知道如何安装模块，或者不知到为啥要全局安装，可以参看[这篇文章](http://goddyzhao.tumblr.com/post/9835631010/no-direct-command-for-local-installed-command-line-modul)），
+然后，直接输入命令： _node-inspector_ 就运行起来了。起来后，终端可以看到如下log：  
+<pre><code> info  - socket.io started
+visit http://0.0.0.0:8080/debug?port=5858 to start debugging</code></pre>
+
+通过看log也大致能够猜到了，node-inspector就是利用socket.io来监听5858端口实现的。  
+
+*  **使用浏览器调试工具来调试node（如： chrome developer tool）**： 在chrome中输入： _http://localhost:8080/debug?port=5858_，就会出现如下页面：    
+![chrome下调试界面](http://photo2.bababian.com/upload5/20111016/0050D732754A719968721CB8DE5860C5_800.jpg)  
+
+这里很明显看到，直接代码就停在第一行，那么，接下来如何断点来debug相信身为前端的童鞋就不用我再赘述了吧。  
