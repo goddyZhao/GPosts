@@ -24,7 +24,7 @@ alert(a);</code></pre>
 这个问题，初一看感觉答案很自然是1。因为从上到下执行下去，_if_语句中的条件应该为 _true_，因为"a"的确是没有定义啊。
 随后，顺理成章地进入 _var a = 1;_，最后，alert出来就应该是1。  
 
-而实施上，从JavaScript内部工作原理去看，在[变量对象](http://goddyzhao.tumblr.com/post/11141710441/variable-object)中讲过，
+而事实上，从JavaScript内部工作原理去看，在[变量对象](http://goddyzhao.tumblr.com/post/11141710441/variable-object)中讲过，
 JavaScript处理上下文分为两个阶段：  
 
 *  进入执行上下文  
