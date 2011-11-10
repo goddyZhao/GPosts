@@ -46,6 +46,6 @@ visit http://0.0.0.0:8080/debug?port=5858 to start debugging</code></pre>
 通过看log也大致能够猜到了，node-inspector就是利用socket.io来监听5858端口实现的。  
 
 *  **使用浏览器调试工具来调试node（如： chrome developer tool）**： 在chrome中输入： _http://localhost:8080/debug?port=5858_，就会出现如下页面：    
-![chrome下调试界面](http://photo2.bababian.com/upload5/20111016/0050D732754A719968721CB8DE5860C5_800.jpg)  
+![chrome下调试界面](http://farm7.static.flickr.com/6235/6249843270_42121ed082_z.jpg)  
 
 这里很明显看到，直接代码就停在第一行，那么，接下来如何断点来debug相信身为前端的童鞋就不用我再赘述了吧。  
