@@ -72,7 +72,7 @@
 > ...  
 
 这里不对valueOf再去做赘述了，MDN上面有很[简短的说明](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/ValueOf),大致意思如下：  
-> 默认，每个对象都有从Object集成下来的valueOf方法。其中每个内置的核心对象都会重载该方法来返回正确的值，对于没有基础类型值的对象，则返回对象自身。  
+> 默认，每个对象都有从Object继承下来的valueOf方法。其中每个内置的核心对象都会重载该方法来返回正确的值，对于没有基础类型值的对象，则返回对象自身。  
 
 那么，对于我们的情况来说，进入了算法中的2，但是，因为val是对象不是基础类型，所以继续进入第3步，这个时候关键来了：  
 **开始调用[]的toString方法，这个时候会返回\"\"，一个空的字符串，因此ToPrimitive([])为\"\"**  
