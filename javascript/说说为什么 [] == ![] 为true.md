@@ -1,4 +1,4 @@
-此前在微薄上无意中看到有人问**“为什么alert([] == ![])会是true？”**，  
+此前在微博上无意中看到有人问**“为什么alert([] == ![])会是true？”**，  
 刚看到这个问题我也说不上来究竟是什么原因，只知道这个肯定又是和**==**操作相关的类型转换问题。  
 于是，就翻开了[**“葵花宝典（ECMA-262-5th）”**](http://www.ecma-international.org/publications/standards/Ecma-262.htm)，你懂的。  
 
