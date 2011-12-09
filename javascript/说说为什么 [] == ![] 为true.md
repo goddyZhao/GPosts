@@ -83,7 +83,7 @@
 > The comparison x == y, where x and y are values, produces true or false. Such a comparison is performed as follows:  
 > 5. If Type(x) is String and Type(y) is Number, return the result of the comparison ToNumber(x) == y.  
 
-好了，根据算法，会将""转化为数值类型，那么自然就变成了0，于是 0 == 0 是很自然而然的。
+好了，根据算法，会将\"\"转化为数值类型，那么自然就变成了0，于是 0 == 0 是很自然而然的。
 
 **总结：**  
 最终问题就从： **[] == ![]** 变成了 **0 == 0**。答案自然是**true**了。  
